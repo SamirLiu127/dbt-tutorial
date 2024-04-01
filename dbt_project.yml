@@ -24,6 +24,11 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_packages"
 
 
+vars:
+  dbt_tutorial:
+    project: dbt-tutorial
+    payment_methods: ['credit_card', 'coupon', 'bank_transfer', 'gift_card']
+
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
@@ -34,5 +39,9 @@ models:
   dbt_tutorial:
     # Config indicated by + and applies to all files under models/example/
     example:
-      +enable: false
+      +enabled: false
       +materialized: view
+    staging:
+      +materialized: view
+    mart:
+      +materialized: table
