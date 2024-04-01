@@ -42,6 +42,8 @@ models:
       +enabled: false
       +materialized: view
     staging:
+      +tags: staging
       +materialized: view
     mart:
+      +tags: mart
       +materialized: table
