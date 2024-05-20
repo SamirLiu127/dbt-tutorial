@@ -21,11 +21,3 @@ sources:
             description: Note that the status can change over time
 
       - name: customers
-
-  - name: stripe
-    config:
-      tags: stripe
-    database: "{{var('project')}}" 
-    schema: stripe 
-    tables:
-      - name: payment

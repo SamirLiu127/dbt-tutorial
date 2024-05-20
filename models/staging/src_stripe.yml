@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: stripe
+    config:
+      tags: stripe
+    database: "{{var('project')}}" 
+    schema: stripe 
+    tables:
+      - name: payment
